@@ -29,11 +29,10 @@ class LeagueActivity : AppCompatActivity() {
 
         desc_league.text = detail.leagueDesc
 
-
-        collapsing_toolbar.setCollapsedTitleTextColor(
-            ContextCompat.getColor(this, android.R.color.white)
-        )
-
+        collapsing_toolbar.apply {
+            setExpandedTitleColor(ContextCompat.getColor(context, android.R.color.white))
+            setCollapsedTitleTextColor(ContextCompat.getColor(context, android.R.color.black))
+        }
 
 
         Glide.with(this).load(detail.leagueBadge).into(backdrop)
